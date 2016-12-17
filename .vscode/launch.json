@@ -9,17 +9,22 @@
       "request": "launch",
       "name": "Launch Program",
       "preLaunchTask": "default",
-      "program": "${workspaceRoot}/dist/use_meaning.js",
+      "program": "${workspaceRoot}/dist/use-meaning.js",
       "cwd": "${workspaceRoot}",
       "outFiles": ["${workspaceRoot}/dist/**/*.js"],
       "sourceMaps": true
     },
     {
       "type": "node",
-      "request": "attach",
-      "name": "Attach to Process",
-      "port": 5858,
-      "outFiles": [],
+      "request": "launch",
+      "name": "Launch Test",
+      "preLaunchTask": "default",
+      "program": "${workspaceRoot}/node_modules/mocha/bin/_mocha",
+      "args": [
+        "${workspaceRoot}/dist/test/test-meaning.js"
+      ],
+      "cwd": "${workspaceRoot}",
+      "outFiles": ["${workspaceRoot}/dist/**/*.js"],
       "sourceMaps": true
     }
   ]
