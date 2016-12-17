@@ -8,7 +8,7 @@
       "type": "node",
       "request": "launch",
       "name": "Launch Program",
-      "preLaunchTask": "default",
+      "preLaunchTask": "ts",
       "program": "${workspaceRoot}/dist/use-meaning.js",
       "cwd": "${workspaceRoot}",
       "outFiles": ["${workspaceRoot}/dist/**/*.js"],
@@ -18,10 +18,11 @@
       "type": "node",
       "request": "launch",
       "name": "Launch Test",
-      "preLaunchTask": "default",
+      "preLaunchTask": "ts",
       "program": "${workspaceRoot}/node_modules/mocha/bin/_mocha",
       "args": [
-        "${workspaceRoot}/dist/test/test-meaning.js"
+        "${workspaceRoot}/dist/test/test-meaning.js",
+        "--no-timeouts"
       ],
       "cwd": "${workspaceRoot}",
       "outFiles": ["${workspaceRoot}/dist/**/*.js"],
